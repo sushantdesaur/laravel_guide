@@ -13,8 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('profiles', function (Blueprint $table) {
+            $table->bigIncrements("id");
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('url')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('username')->unique();
