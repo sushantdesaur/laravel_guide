@@ -18,11 +18,21 @@ class PostsController extends Controller
 
         $post = new \App\Post();
 
-        auth()->user()->posts()->create($data);
+        $imagePath = request('image')->store('uploads', 'public');
 
-        dd(request('image')->store('uploads', 'public'));
+        $image = Image::make(public_path('storage/{$imagePath}'))->fit(1200, 1200); //Intervention/image
+        $image->save();
 
-        dd(request()->all());
+        auth()->user()->posts()->create([
+            'caption'=> $data['caption'],
+            'image' =>$imagePath,
+        ]);
+
+        return redirect('/profile/'. auth()->user()->id);
+    }
+
+    public function show($post) {
+        dd($post);
     }
     
 }
