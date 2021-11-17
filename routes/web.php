@@ -19,13 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+
 
 Auth::routes();
 
 Route::post('follow/{user}', 'FollowsController@store');
 
-
+Route::get('/', 'PostsController@index');
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 Route::get('/p/{post}', 'PostsController@show');
