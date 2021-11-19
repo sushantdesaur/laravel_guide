@@ -6,4 +6,4 @@
 
 It uses [SQLite](https://www.sqlite.org/index.html) Database, [Bootstrap](https://getbootstrap.com/) and [NodeJs](https://nodejs.org/en/).
 
-It is my first porject on laravel and PHP
+It is my first project on laravel and PHP
