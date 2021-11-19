@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-    @foreach ($posts as $post)
+    @foreach($posts as $post)
         <div class="row">
             <div class="col-6 offset-3">
-                <a href="/profile/{{ profile->user->id }}">
-                    <img src="/storage/{{ $post->image }}" class='w-100'>
+                <a href="/profile/{{ $post->user->id }}">
+                    <img src="/storage/{{ $post->image }}" class="w-100">
                 </a>
             </div>
         </div>
@@ -18,15 +18,17 @@
                         <a href="/profile/{{ $post->user->id }}">
                             <span class="text-dark">{{ $post->user->username }}</span>
                         </a>
-                    </span>{{ $post->caption }}</p>
+                    </span> {{ $post->caption }}
+                    </p>
                 </div>
             </div>
-    </div>
-   @endforeach
-   <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            {{ $posts->links() }}
         </div>
-    </div>
+    @endforeach
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                {{ $posts->links() }}
+            </div>
+        </div>
 </div>
 @endsection
