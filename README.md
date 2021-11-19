@@ -4,4 +4,4 @@
 
 ### This is an Instagram Clone made built using laravel and Vue.js
 
-### It uses [SQLite](https://www.sqlite.org/index.html) Database, [Bootstrap](https://getbootstrap.com/) and [NodeJs](https://nodejs.org/en/).
+ It uses [SQLite](https://www.sqlite.org/index.html) Database, [Bootstrap](https://getbootstrap.com/) and [NodeJs](https://nodejs.org/en/).
