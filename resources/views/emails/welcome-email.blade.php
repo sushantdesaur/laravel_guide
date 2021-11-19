@@ -1,12 +1,10 @@
 @component('mail::message')
-# Introduction
+# Welcome to MoneyGram
 
-The body of your message.
+This is the community for money makers, smart solution finders and hard working people.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+All the best,<br>
+
+r_Silvergun
 @endcomponent
